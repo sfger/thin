@@ -1,0 +1,12 @@
+tags
+npm-debug.log
+npm-debug.log.*
+/.vs/
+
+/dist/
+node_modules/
+.sass-cache/
+
+/config/*.js
+!/config/options.js
+!/config/test.js
