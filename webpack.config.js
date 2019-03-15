@@ -12,13 +12,9 @@ module.exports = {
   },
   output: {
     path: path.normalize( root + "/dist/" ),
-    // filename: "[name]_[chunkhash:8].js",
     filename: "[name].js",
     chunkFilename: "[name].js",
     publicPath: "/"
-    // libraryTarget: "umd"
-    // library: 'test',
-    // publicPath: '../dist/'
   },
   resolve: {
     modules: [
@@ -38,20 +34,7 @@ module.exports = {
       // react: "react/index.js"
     }
   },
-  externals: {
-    // react: {
-    //   amd: "react",
-    //   root: "React",
-    //   commonjs: "react",
-    //   commonjs2: "react"
-    // },
-    // "react-dom": {
-    //   amd: "react-dom",
-    //   root: "ReactDOM",
-    //   commonjs: "react-dom",
-    //   commonjs2: "react-dom"
-    // }
-  },
+  externals: {},
   module: {
     rules: [
       {
@@ -76,8 +59,7 @@ module.exports = {
           },
           {
             loader: "css-loader",
-            options: {
-            }
+            options: {}
           },
           {
             loader: "sass-loader",
@@ -91,8 +73,7 @@ module.exports = {
           "style-loader",
           {
             loader: "css-loader",
-            options: {
-            }
+            options: {}
           }
         ]
       },
@@ -111,7 +92,7 @@ module.exports = {
     ]
   },
   plugins: [
-    new webpack.optimize.ModuleConcatenationPlugin(),
+    new webpack.optimize.ModuleConcatenationPlugin()
     // new WebpackMd5Hash()
   ],
   stats: {
